@@ -75,7 +75,7 @@ Create a Word document with Snowflake branding — use the right colors for head
 ```
 
 ```
-I'm building a co-branded page with Datadog. How should the logos be arranged?
+I'm building a co-branded page with Anthropic. How should the logos be arranged?
 ```
 
 ## Color Reference
