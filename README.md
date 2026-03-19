@@ -18,19 +18,7 @@ Without the skill, Claude uses generic colors and guesses at brand specs. With i
 
 ## Installation
 
-### Option 1: Ask Claude Code to Install It
-
-Open Claude Code and ask:
-
-```
-Install the snowflake-brand plugin from github.com/obs-gh-chrismilton/snowflake-brand-skill
-```
-
-Claude will add the marketplace source and enable the plugin in your settings.
-
-### Option 2: Manual Configuration
-
-Add the plugin to your Claude Code settings file directly. In `~/.claude/settings.json`, add (or merge with your existing config):
+Add the plugin source and enable it in your Claude Code settings. Open `~/.claude/settings.json` and add (or merge with your existing config):
 
 ```json
 {
