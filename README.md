@@ -113,13 +113,8 @@ This plugin includes official Snowflake brand assets in the `skills/snowflake-br
 
 ```
 assets/
-├── Snowflake-Brand-Book.pdf          # Full 32-page brand book
 ├── Snowflake_Template_2025.pptx.zip  # Official 2025 PowerPoint template
 ├── Snowflake-Graphics-Package.zip    # Dot backgrounds, decorative elements
-├── Snowflake-Logo-Package.zip        # All logo variants (bundled)
-├── Snowflake-Brand-Colors.zip        # Color swatches (bundled)
-├── Snowflake-UI-Elements.zip         # UI kit (bundled)
-├── Snowflake-Partner-Guidelines.zip  # Partner co-branding rules (bundled)
 │
 ├── logos/Snowflake Logo/
 │   ├── Digital/
@@ -143,6 +138,8 @@ assets/
     └── Snowflake-UI-Elements.sketch
 ```
 
+The full Snowflake Brand Book PDF is available at [snowflake.com/brand-guidelines](https://www.snowflake.com/brand-guidelines/) and was used as the source for this skill's text definitions.
+
 Large binary files (PDFs, ZIPs, EPS, AI) are tracked with [Git LFS](https://git-lfs.github.com/). Make sure you have Git LFS installed before cloning:
 
 ```bash
@@ -157,34 +154,13 @@ git clone https://github.com/obs-gh-chrismilton/snowflake-brand-skill.git
 snowflake-brand-skill/
 ├── plugin.json                        # Plugin manifest
 ├── README.md                          # This file
-├── skills/
-│   └── snowflake-brand/
-│       ├── SKILL.md                   # Skill definition (loaded by Claude Code)
-│       ├── assets/                    # Official brand assets (see above)
-│       └── references/
-│           └── detailed-specs.md      # Full specs including CMYK/PMS values
-├── evals/
-│   └── evals.json                     # Skill evaluation definitions
-└── snowflake-brand-workspace/
-    └── iteration-1/                   # Benchmark results from skill evaluation
-        ├── benchmark.json
-        ├── benchmark.md
-        ├── visual-comparison.html
-        └── eval-*/                    # Individual eval results (with/without skill)
+└── skills/
+    └── snowflake-brand/
+        ├── SKILL.md                   # Skill definition (loaded by Claude Code)
+        ├── assets/                    # Official brand assets (see above)
+        └── references/
+            └── detailed-specs.md      # Full specs including CMYK/PMS values
 ```
-
-## Eval Results
-
-The skill was benchmarked across 4 tasks comparing output with and without the skill enabled:
-
-| Task | Without Skill | With Skill |
-|------|:---:|:---:|
-| Hero section (HTML/CSS) | Generic blue, wrong fonts | Correct #29B5E8, Lato, pill buttons |
-| Co-branding guidance | Vague advice | Specific clear-space and sizing rules |
-| Dashboard CSS | Approximate colors | Exact palette with CSS variables |
-| Document guidelines | Generic formatting | Snowflake-compliant headings, tables, accents |
-
-The with-skill output uses ~72% more tokens and ~77% more time, but the quality improvement is significant — every output was brand-compliant on the first pass.
 
 ## Source
 
