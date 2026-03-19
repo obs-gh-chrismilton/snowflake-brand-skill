@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "configuration": "without_skill",
+  "expectations": [
+    {"text": "Includes all 12 official brand colors as CSS variables", "passed": false, "evidence": "Only Snowflake Blue and Deep Blue from official palette. Many invented colors (#1A8CB8, #6ED0F0). Missing all 5 secondary colors and 4 tertiary colors."},
+    {"text": "Includes data visualization color sequence", "passed": true, "evidence": "Lines 67-74: --sf-chart-1 through --sf-chart-8 defined"},
+    {"text": "First chart color is Snowflake Blue #29B5E8", "passed": true, "evidence": "Line 67: --sf-chart-1: #29B5E8"},
+    {"text": "Includes typography variables referencing Lato", "passed": false, "evidence": "Uses 'Inter', 'Helvetica Neue', Arial — not Lato or any official Snowflake font"}
+  ]
+}

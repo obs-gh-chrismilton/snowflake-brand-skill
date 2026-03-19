@@ -1,0 +1,11 @@
+{
+  "eval_id": 4,
+  "configuration": "with_skill",
+  "expectations": [
+    {"text": "Differentiates internal vs customer-facing docs", "passed": true, "evidence": "Clear separate sections for 'Customer-Facing Proposal' and 'Internal Strategy Document' with distinct rules"},
+    {"text": "Customer-facing mentions logo clear space rules", "passed": true, "evidence": "'Maintain minimum clear space on all sides equal to the x-height of the logotype'"},
+    {"text": "Mentions Snowflake Blue #29B5E8 as primary accent", "passed": true, "evidence": "Shared Fundamentals: 'Primary brand color: Snowflake Blue #29B5E8 -- use the exact hex value, never an approximation'"},
+    {"text": "References Lato as body font", "passed": true, "evidence": "'Body font: Lato (available via Google Fonts)'"},
+    {"text": "References brand book PDF or 2025 template", "passed": true, "evidence": "References both: 'assets/Snowflake_Template_2025.pptx.zip' and 'assets/Snowflake-Brand-Book.pdf'"}
+  ]
+}

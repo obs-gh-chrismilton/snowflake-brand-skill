@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "configuration": "without_skill",
+  "expectations": [
+    {"text": "Mentions center-aligned logos", "passed": true, "evidence": "Section 2: 'Align logos along a common baseline or center axis'"},
+    {"text": "Mentions equal spacing between logos", "passed": true, "evidence": "Section 2: Mentions 'minimum distance is roughly 2x the clear space requirement'"},
+    {"text": "Mentions optical sizing vs pixel matching", "passed": false, "evidence": "Says 'equal visual weight' but does not explicitly distinguish optical vs pixel sizing"},
+    {"text": "References 2025 PowerPoint template", "passed": false, "evidence": "No mention of any PowerPoint template"},
+    {"text": "References partner guidelines PDF", "passed": false, "evidence": "No reference to partner guidelines PDF; suggests 'Request official logo files from partner contact'"}
+  ]
+}

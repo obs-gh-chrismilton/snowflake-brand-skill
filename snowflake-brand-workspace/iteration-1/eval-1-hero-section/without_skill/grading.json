@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "configuration": "without_skill",
+  "expectations": [
+    {"text": "Uses exact Snowflake Blue #29B5E8", "passed": true, "evidence": "Uses #29b5e8 (lowercase) as primary color throughout"},
+    {"text": "Button has border-radius 80px pill shape", "passed": false, "evidence": "Uses border-radius: 8px for buttons — standard rounded corners, not the brand-spec 80px pill shape"},
+    {"text": "Button text is ALL CAPS", "passed": false, "evidence": "Buttons read 'Start Your Free Trial' and 'See a Demo' in mixed case, no text-transform: uppercase"},
+    {"text": "Uses Lato font loaded from Google Fonts", "passed": false, "evidence": "Uses system font stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto — no Lato"},
+    {"text": "CSS uses custom properties for brand colors", "passed": false, "evidence": "No CSS custom properties defined; all colors hardcoded inline"}
+  ]
+}

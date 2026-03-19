@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "eval_name": "dashboard-css-variables",
+  "prompt": "Generate CSS variables for a Snowflake-branded dashboard with a chart color scheme",
+  "assertions": [
+    {"text": "Includes all 12 official brand colors as CSS variables", "type": "completeness"},
+    {"text": "Includes data visualization color sequence", "type": "feature"},
+    {"text": "First chart color is Snowflake Blue #29B5E8", "type": "color_accuracy"},
+    {"text": "Includes typography variables referencing Lato", "type": "typography"}
+  ]
+}

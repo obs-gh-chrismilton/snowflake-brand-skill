@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "skill_name": "snowflake-brand",
+    "skill_path": "/Users/chmilton/.claude/plugins/local/snowflake-brand/skills/snowflake-brand",
+    "executor_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T18:46:37Z",
+    "evals_run": ["hero-section-html", "cobranding-guidance", "dashboard-css-variables", "document-brand-guidelines"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_name": "hero-section-html",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5,
+      "total_tokens": 33788,
+      "duration_ms": 174684,
+      "expectations": [
+        {"text": "Uses exact Snowflake Blue #29B5E8", "passed": true, "evidence": "Line 11: --sf-blue: #29B5E8"},
+        {"text": "Button has border-radius 80px pill shape", "passed": true, "evidence": "Line 189: border-radius: 80px"},
+        {"text": "Button text is ALL CAPS", "passed": true, "evidence": "text-transform: uppercase; buttons 'START FREE' / 'LEARN MORE'"},
+        {"text": "Uses Lato font loaded from Google Fonts", "passed": true, "evidence": "Google Fonts import for Lato:wght@300;400;700;900"},
+        {"text": "CSS uses custom properties for brand colors", "passed": true, "evidence": "Full :root block with all 12 brand colors"}
+      ]
+    },
+    {
+      "eval_name": "hero-section-html",
+      "configuration": "without_skill",
+      "pass_rate": 0.2,
+      "passed": 1,
+      "total": 5,
+      "total_tokens": 14395,
+      "duration_ms": 59597,
+      "expectations": [
+        {"text": "Uses exact Snowflake Blue #29B5E8", "passed": true, "evidence": "Uses #29b5e8 throughout"},
+        {"text": "Button has border-radius 80px pill shape", "passed": false, "evidence": "Uses border-radius: 8px — not 80px pill"},
+        {"text": "Button text is ALL CAPS", "passed": false, "evidence": "Mixed case: 'Start Your Free Trial'"},
+        {"text": "Uses Lato font loaded from Google Fonts", "passed": false, "evidence": "System font stack, no Lato"},
+        {"text": "CSS uses custom properties for brand colors", "passed": false, "evidence": "No CSS custom properties, hardcoded colors"}
+      ]
+    },
+    {
+      "eval_name": "cobranding-guidance",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5,
+      "total_tokens": 20420,
+      "duration_ms": 87885,
+      "expectations": [
+        {"text": "Mentions center-aligned logos", "passed": true, "evidence": "'All logos must be center-aligned'"},
+        {"text": "Mentions equal spacing between logos", "passed": true, "evidence": "'Logos must be spaced equally'"},
+        {"text": "Mentions optical sizing vs pixel matching", "passed": true, "evidence": "'optically the same size — match visual weight, not just pixel dimensions'"},
+        {"text": "References 2025 PowerPoint template", "passed": true, "evidence": "Section 6 with path and download URL"},
+        {"text": "References partner guidelines PDF", "passed": true, "evidence": "Section 7 with full file path"}
+      ]
+    },
+    {
+      "eval_name": "cobranding-guidance",
+      "configuration": "without_skill",
+      "pass_rate": 0.4,
+      "passed": 2,
+      "total": 5,
+      "total_tokens": 12275,
+      "duration_ms": 60155,
+      "expectations": [
+        {"text": "Mentions center-aligned logos", "passed": true, "evidence": "'Align logos along a common baseline or center axis'"},
+        {"text": "Mentions equal spacing between logos", "passed": true, "evidence": "Mentions minimum distance/spacing"},
+        {"text": "Mentions optical sizing vs pixel matching", "passed": false, "evidence": "Says 'equal visual weight' but no optical vs pixel distinction"},
+        {"text": "References 2025 PowerPoint template", "passed": false, "evidence": "No template mention"},
+        {"text": "References partner guidelines PDF", "passed": false, "evidence": "No PDF reference; says 'request from partner contact'"}
+      ]
+    },
+    {
+      "eval_name": "dashboard-css-variables",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 4,
+      "total": 4,
+      "total_tokens": 18892,
+      "duration_ms": 78748,
+      "expectations": [
+        {"text": "Includes all 12 official brand colors", "passed": true, "evidence": "All 12 colors with correct hex values"},
+        {"text": "Includes data visualization color sequence", "passed": true, "evidence": "--sf-chart-1 through --sf-chart-6"},
+        {"text": "First chart color is Snowflake Blue #29B5E8", "passed": true, "evidence": "--sf-chart-1: #29B5E8"},
+        {"text": "Typography variables reference Lato", "passed": true, "evidence": "--sf-font-body: 'Lato' with Google Fonts import"}
+      ]
+    },
+    {
+      "eval_name": "dashboard-css-variables",
+      "configuration": "without_skill",
+      "pass_rate": 0.5,
+      "passed": 2,
+      "total": 4,
+      "total_tokens": 13176,
+      "duration_ms": 50770,
+      "expectations": [
+        {"text": "Includes all 12 official brand colors", "passed": false, "evidence": "Only 2 official colors; many invented (#1A8CB8, #6ED0F0)"},
+        {"text": "Includes data visualization color sequence", "passed": true, "evidence": "8-color chart palette defined"},
+        {"text": "First chart color is Snowflake Blue #29B5E8", "passed": true, "evidence": "--sf-chart-1: #29B5E8"},
+        {"text": "Typography variables reference Lato", "passed": false, "evidence": "Uses Inter, Helvetica Neue, Arial — not Lato"}
+      ]
+    },
+    {
+      "eval_name": "document-brand-guidelines",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5,
+      "total_tokens": 16623,
+      "duration_ms": 66162,
+      "expectations": [
+        {"text": "Differentiates internal vs customer-facing", "passed": true, "evidence": "Clear separate sections with distinct rules"},
+        {"text": "Customer-facing mentions logo clear space", "passed": true, "evidence": "'equal to the x-height of the logotype'"},
+        {"text": "Snowflake Blue #29B5E8 as primary accent", "passed": true, "evidence": "'use the exact hex value, never an approximation'"},
+        {"text": "References Lato as body font", "passed": true, "evidence": "'Body font: Lato (available via Google Fonts)'"},
+        {"text": "References brand book or 2025 template", "passed": true, "evidence": "References both brand book PDF and 2025 template with paths"}
+      ]
+    },
+    {
+      "eval_name": "document-brand-guidelines",
+      "configuration": "without_skill",
+      "pass_rate": 0.4,
+      "passed": 2,
+      "total": 5,
+      "total_tokens": 12237,
+      "duration_ms": 59563,
+      "expectations": [
+        {"text": "Differentiates internal vs customer-facing", "passed": true, "evidence": "Two separate sections"},
+        {"text": "Customer-facing mentions logo clear space", "passed": true, "evidence": "'adequate clear space around the logo'"},
+        {"text": "Snowflake Blue #29B5E8 as primary accent", "passed": false, "evidence": "Says 'approximately #29B5E8' — uncertain"},
+        {"text": "References Lato as body font", "passed": false, "evidence": "No font specified, just 'clean, professional formatting'"},
+        {"text": "References brand book or 2025 template", "passed": false, "evidence": "Says 'check the Partner Portal' — no specific assets"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "avg_pass_rate": 1.0,
+      "avg_tokens": 22431,
+      "avg_duration_seconds": 101.9
+    },
+    "without_skill": {
+      "avg_pass_rate": 0.375,
+      "avg_tokens": 13021,
+      "avg_duration_seconds": 57.6
+    },
+    "delta": {
+      "pass_rate": "+62.5%",
+      "time_seconds": "+44.3s",
+      "tokens": "+9410"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 4 evals (19/19 assertions)",
+    "Without-skill passes only 37.5% (7/19 assertions)",
+    "The skill's biggest impact is on specificity: exact hex values, exact dimensions, correct fonts, and bundled asset references",
+    "Without the skill, Claude knows Snowflake Blue but misses button specs, font choices, and has no access to assets",
+    "Trade-off: with-skill uses ~72% more tokens and ~77% more time, but the quality improvement is dramatic"
+  ]
+}

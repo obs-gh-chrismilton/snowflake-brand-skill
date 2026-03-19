@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "cobranding-guidance",
+  "prompt": "I need to create a co-branded slide deck with our company logo and Snowflake's — what are the rules?",
+  "assertions": [
+    {"text": "Mentions center-aligned logos", "type": "content_accuracy"},
+    {"text": "Mentions equal spacing between logos", "type": "content_accuracy"},
+    {"text": "Mentions optical sizing vs pixel matching", "type": "content_accuracy"},
+    {"text": "References 2025 PowerPoint template", "type": "asset_reference"},
+    {"text": "References partner guidelines PDF", "type": "asset_reference"}
+  ]
+}

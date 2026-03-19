@@ -1,0 +1,12 @@
+{
+  "eval_id": 4,
+  "eval_name": "document-brand-guidelines",
+  "prompt": "I'm writing an internal strategy doc and a customer-facing proposal that both involve our Snowflake partnership — what brand guidelines should I follow for each?",
+  "assertions": [
+    {"text": "Differentiates internal vs customer-facing docs", "type": "structure"},
+    {"text": "Customer-facing mentions logo clear space rules", "type": "content_accuracy"},
+    {"text": "Mentions Snowflake Blue #29B5E8 as primary accent", "type": "color_accuracy"},
+    {"text": "References Lato as body font", "type": "typography"},
+    {"text": "References brand book PDF or 2025 template", "type": "asset_reference"}
+  ]
+}
