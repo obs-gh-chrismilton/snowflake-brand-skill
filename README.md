@@ -18,13 +18,27 @@ Without the skill, Claude uses generic colors and guesses at brand specs. With i
 
 ## Installation
 
-### From the Claude Code Plugin Marketplace
+### Option 1: Install from the Claude Code Prompt
 
-If this plugin is published to a marketplace you have access to, install it directly in Claude Code.
+The easiest way. Open Claude Code and type:
 
-### From This Repository
+```
+/install-plugin obs-gh-chrismilton/snowflake-brand-skill
+```
 
-Add the plugin to your Claude Code settings. In `~/.claude/settings.json`, add:
+Claude Code will pull the plugin from this repository and enable it. You may be prompted to approve the new plugin source since it's a private repo.
+
+If that command isn't available in your version, you can also ask Claude directly:
+
+```
+Install the snowflake-brand plugin from github.com/obs-gh-chrismilton/snowflake-brand-skill
+```
+
+Claude will walk you through adding the marketplace source and enabling the plugin.
+
+### Option 2: Manual Configuration
+
+Add the plugin to your Claude Code settings file directly. In `~/.claude/settings.json`, add (or merge with your existing config):
 
 ```json
 {
@@ -43,6 +57,22 @@ Add the plugin to your Claude Code settings. In `~/.claude/settings.json`, add:
 ```
 
 Then restart Claude Code. The skill will be available automatically.
+
+### Verify Installation
+
+After installing, you can confirm the skill is loaded by running:
+
+```
+/skills
+```
+
+You should see `snowflake-brand` in the list. You can also test it:
+
+```
+What are Snowflake's official brand colors?
+```
+
+If the response includes specific hex codes (#29B5E8, #11567F, etc.) and names like "Snowflake Blue" and "Mid Blue," the skill is working.
 
 ## Usage
 
