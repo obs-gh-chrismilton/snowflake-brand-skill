@@ -178,7 +178,7 @@ All brand assets and guidelines are sourced from the official [Snowflake Brand G
 
 ## Access
 
-This is a private repository. To request access, contact Chris Milton. If you're part of the Observe or Snowflake GitHub orgs and need access, reach out and you'll be added as a collaborator.
+This is a public repository. Anyone can clone it and use it as a Claude Code plugin. If you have questions or want to contribute, open an issue or reach out to Chris Milton.
 
 ## License
 
